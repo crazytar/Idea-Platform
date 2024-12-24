@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { Button } from './shadcn/button';
 import { cn, convertPrice } from '../../lib/utils';
-import { currencyType, Ticket } from '@/App';
+import { currencyType, stopsFilterArr, Ticket } from '../../App';
 import { Plane } from 'lucide-react';
 
 
@@ -35,7 +35,8 @@ export const TicketCart: FC<TicketCartProps> = ({ className, ticket, currency })
                     </div>
                 </div>
                 <div className="flex-1 border-b border-dashed border-b-neutral-200 relative mx-2" >
-                    <span className="absolute top-[70%] left-1/2 -translate-x-1/2 text-sm font-bold">{ticket.stops} ПЕРЕСАДКИ</span>
+                    <span className="absolute top-[70%] left-1/2 -translate-x-1/2 text-sm font-bold">
+                        {stopsFilterArr[ticket.stops].name}</span>
                 </div>
 
                 <Plane className=' ' />
