@@ -1,7 +1,7 @@
 import React, { FC, useContext } from 'react'
 import { Checkbox } from './shadcn/checkbox';
 import { cn } from '../../lib/utils';
-import { stopsFilterArr } from '@/App';
+import { stopsFilterArr } from '@/lib/constants';
 
 interface FilterCheckBoxGroupProps {
     className?: string;

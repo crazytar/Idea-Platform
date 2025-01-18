@@ -1,4 +1,4 @@
-import { currencyType } from "@/App"
+import { currencyType } from "@/types/main"
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 

@@ -1,7 +1,7 @@
 import React, { FC, useContext } from 'react'
 import { Button } from './shadcn/button';
 import { cn } from '../../lib/utils';
-import { currencyType } from '@/App';
+import { currencyType } from '@/types/main';
 // import { AppContext } from '@/App';
 
 interface CurrencySelectorProps {

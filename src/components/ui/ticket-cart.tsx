@@ -1,27 +1,33 @@
 import React, { FC } from 'react'
 import { Button } from './shadcn/button';
 import { cn, convertPrice } from '../../lib/utils';
-import { currencyType, stopsFilterArr, Ticket } from '../../App';
 import { Plane } from 'lucide-react';
-
+import { currencyType, Ticket } from '@/types/main';
+import { stopsFilterArr } from '@/lib/constants';
+import { AppContext } from '../providers';
+import { useNavigate } from 'react-router-dom';
 
 interface TicketCartProps {
     className?: string;
     ticket: Ticket;
     currency: currencyType;
+    withButton?: boolean;
 }
 
-export const TicketCart: FC<TicketCartProps> = ({ className, ticket, currency }) => {
+export const TicketCart: FC<TicketCartProps> = ({ className, ticket, currency, withButton = true }) => {
+    const navigate = useNavigate();
+    const { setTicket } = React.useContext(AppContext);
     return (
         <div className={cn('flex flex-1 flex-row gap-2 rounded-md shadow-sm bg-muted p-4', className)}>
             {/* Левая часть */}
             <div className="flex flex-col gap2 w-64">
                 <img src='/turkich.png' alt="ticket" className="h-auto max-w-full" />
-                <Button className="bg-primary w-full h-14 rounded-2xl mt-6 text-base font-bold">
-                    <span>Купить</span>
-                    <hr />
-                    <span>за {convertPrice('RUB', currency, ticket.price)} {currency}</span>
-                </Button>
+                {withButton &&
+                    <Button onClick={() => { setTicket(ticket); navigate('/checkout'); }} className="bg-primary w-full h-14 rounded-2xl mt-6 text-base font-bold">
+                        <span>Купить</span>
+                        <hr />
+                        <span>за {convertPrice('RUB', currency, ticket.price)} {currency}</span>
+                    </Button>}
             </div>
             {/* Правая часть */}
             <div className="flex justify-between flex-row items-center gap-2 w-full">

@@ -2,7 +2,8 @@ import React, { FC } from 'react'
 // import { tickets } from '../../lib/tickets.json';
 import { TicketCart } from './ticket-cart';
 import { cn } from '../../lib/utils';
-import { currencyType, Ticket } from '@/App';
+import { currencyType, Ticket } from '@/types/main';
+
 interface TicketsGroupProps {
     className?: string;
     tickets: Ticket[];
@@ -13,7 +14,6 @@ interface TicketsGroupProps {
 
 // export type Ticket = typeof tickets extends (infer U)[] ? U : never;
 export const TicketsGroup: FC<TicketsGroupProps> = ({ className, tickets, currency, stops }) => {
-    console.log('stops', stops);
     return (
         <div className={cn('flex flex-1 flex-col gap-2', className)}>
             {
