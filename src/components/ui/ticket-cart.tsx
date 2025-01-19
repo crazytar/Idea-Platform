@@ -21,7 +21,7 @@ export const TicketCart: FC<TicketCartProps> = ({ className, ticket, currency, w
         <div className={cn('flex flex-1  flex-row gap-2 rounded-md shadow-sm bg-muted p-4', className)}>
             {/* Левая часть */}
             <div className="flex flex-col gap2  max-w-32 lg:max-w-60 ">
-                <img src='/turkich.png' alt="ticket" className="" />
+                <img src={process.env.PUBLIC_URL + '/turkich.png'} alt="ticket" className="" />
                 {withButton &&
                     <Button onClick={() => { setTicket(ticket); navigate('/checkout'); }}
                         className="flex-wrap min-w-0 shrink bg-primary w-full h-14 rounded-2xl mt-6 text-sm sm:text-base font-bold"

@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://crazytar.github.io/Idea-Platform",
   "cracoConfig": "craco.config.js",
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -27,6 +28,7 @@
     "gh-pages": "^6.3.0",
     "postcss": "^8.4.49",
     "react-scripts": "5.0.1",
+    "shx": "^0.3.4",
     "tailwind-merge": "^2.5.5",
     "tailwindcss": "^3.4.17",
     "tailwindcss-animate": "^1.0.7",
@@ -34,7 +36,8 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
+    "build": "shx rm -rf build && craco build && shx cp build/index.html build/404.html",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
