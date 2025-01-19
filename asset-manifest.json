@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/%20//crazytar.github.io/Idea-Platform/static/css/main.54d484f5.css",
-    "main.js": "/%20//crazytar.github.io/Idea-Platform/static/js/main.83b9eada.js",
-    "static/js/478.9e1270f9.chunk.js": "/%20//crazytar.github.io/Idea-Platform/static/js/478.9e1270f9.chunk.js",
-    "static/js/369.1dabbbac.chunk.js": "/%20//crazytar.github.io/Idea-Platform/static/js/369.1dabbbac.chunk.js",
-    "index.html": "/%20//crazytar.github.io/Idea-Platform/index.html",
-    "main.54d484f5.css.map": "/%20//crazytar.github.io/Idea-Platform/static/css/main.54d484f5.css.map",
-    "main.83b9eada.js.map": "/%20//crazytar.github.io/Idea-Platform/static/js/main.83b9eada.js.map",
-    "478.9e1270f9.chunk.js.map": "/%20//crazytar.github.io/Idea-Platform/static/js/478.9e1270f9.chunk.js.map",
-    "369.1dabbbac.chunk.js.map": "/%20//crazytar.github.io/Idea-Platform/static/js/369.1dabbbac.chunk.js.map"
+    "main.css": "/static/css/main.54d484f5.css",
+    "main.js": "/static/js/main.3cfeacbc.js",
+    "static/js/478.9e1270f9.chunk.js": "/static/js/478.9e1270f9.chunk.js",
+    "static/js/369.1dabbbac.chunk.js": "/static/js/369.1dabbbac.chunk.js",
+    "index.html": "/index.html",
+    "main.54d484f5.css.map": "/static/css/main.54d484f5.css.map",
+    "main.3cfeacbc.js.map": "/static/js/main.3cfeacbc.js.map",
+    "478.9e1270f9.chunk.js.map": "/static/js/478.9e1270f9.chunk.js.map",
+    "369.1dabbbac.chunk.js.map": "/static/js/369.1dabbbac.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.54d484f5.css",
-    "static/js/main.83b9eada.js"
+    "static/js/main.3cfeacbc.js"
   ]
 }
