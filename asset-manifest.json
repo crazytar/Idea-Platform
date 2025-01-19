@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Idea-Platform/static/css/main.54d484f5.css",
-    "main.js": "/Idea-Platform/static/js/main.636120b8.js",
+    "main.js": "/Idea-Platform/static/js/main.a3630a93.js",
     "static/js/478.9e1270f9.chunk.js": "/Idea-Platform/static/js/478.9e1270f9.chunk.js",
     "static/js/369.1dabbbac.chunk.js": "/Idea-Platform/static/js/369.1dabbbac.chunk.js",
     "index.html": "/Idea-Platform/index.html",
     "main.54d484f5.css.map": "/Idea-Platform/static/css/main.54d484f5.css.map",
-    "main.636120b8.js.map": "/Idea-Platform/static/js/main.636120b8.js.map",
+    "main.a3630a93.js.map": "/Idea-Platform/static/js/main.a3630a93.js.map",
     "478.9e1270f9.chunk.js.map": "/Idea-Platform/static/js/478.9e1270f9.chunk.js.map",
     "369.1dabbbac.chunk.js.map": "/Idea-Platform/static/js/369.1dabbbac.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.54d484f5.css",
-    "static/js/main.636120b8.js"
+    "static/js/main.a3630a93.js"
   ]
 }
