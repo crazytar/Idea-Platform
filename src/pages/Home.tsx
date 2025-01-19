@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import axios from 'axios';
-import { useRaf, useSet } from 'react-use'
+import { useSet } from 'react-use'
 import { Container } from '@/components/ui/container';
 import { SidePanel } from '@/components/ui/side-panel';
 import { CurrencySelector } from '@/components/ui/currency-selector';
@@ -14,7 +14,6 @@ interface HomeProps {
 }
 
 export const Home: FC<HomeProps> = ({ className }) => {
-    const [filterValues, setFilterValues] = React.useState<string[]>([]);
     const [currency, setCurrency] = React.useState<currencyType>('RUB');
     const [tickets, setTickets] = React.useState<Ticket[]>([]);
     const [stops, { toggle: toggleStop, clear: resetStops }] = useSet(new Set<number>());
@@ -34,9 +33,9 @@ export const Home: FC<HomeProps> = ({ className }) => {
         toggleStop(0);
     }, [])
     return (
-        <Container className='flex gap-4 rounded-md translate-y-32' >
-            <SidePanel className='w-[300px] bg-muted rounded-md shadow-sm'>
-                <CurrencySelector selectors={currencyArr} onChange={setCurrency} selected={currency} />
+        <Container className='flex flex-wrap  gap-4 rounded-md md:translate-y-32 ' >
+            <SidePanel className='w-full md:w-[300px] bg-muted rounded-md shadow-sm'>
+                <CurrencySelector className="w-full" selectors={currencyArr} onChange={setCurrency} selected={currency} />
                 <FilterCheckBoxGroup
                     title="КОЛИЧЕСТВО ПЕРЕСАДОК"
                     name="stops"

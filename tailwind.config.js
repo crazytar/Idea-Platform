@@ -8,6 +8,12 @@ module.exports = {
       ...theme('colors'),
       auto: 'auto',
     }),
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
     animation: {
       none: 'none',
       spin: 'spin 1s linear infinite',
@@ -848,13 +854,7 @@ module.exports = {
       125: '1.25',
       150: '1.5',
     },
-    screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
-      '2xl': '1536px',
-    },
+
     scrollMargin: ({ theme }) => ({
       ...theme('spacing'),
     }),

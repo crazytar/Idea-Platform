@@ -34,8 +34,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "eject": "react-scripts eject",
-    "build": "react-scripts build",
+    "build": "craco build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {

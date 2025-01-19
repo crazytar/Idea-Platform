@@ -16,7 +16,7 @@ interface CheckoutProps {
     className?: string;
 }
 
-export const Checkout: FC<CheckoutProps> = ({ className }) => {
+const Checkout: FC<CheckoutProps> = ({ className }) => {
     const { ticket } = React.useContext(AppContext);
     const defaultValues = {} as CheckoutSchemaT;
 
@@ -43,13 +43,13 @@ export const Checkout: FC<CheckoutProps> = ({ className }) => {
             <Title text="Оформление заказа" size="xl" />
             <FormProvider {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)}>
-                    <div className="flex gap-10">
+                    <div className="flex flex-wrap gap-4 sm:gap-10">
                         {/* Левая часть */}
-                        <div className="flex flex-col gap-10 mb-20 flex-1">
-                            <WhiteBlock title="Детали перелёта" className="mb-10 flex-1">
+                        <div className="flex flex-col gap-4 sm:gap-10  flex-1">
+                            <WhiteBlock title="Детали перелёта" className="flex-1">
                                 <TicketCart ticket={ticket} currency="RUB" withButton={false} />
                             </WhiteBlock>
-                            <WhiteBlock title="Персональные данные" className="mb-10 flex-1">
+                            <WhiteBlock title="Персональные данные" className=" flex-1">
                                 <div className="grid grid-cols-2 gap-4" >
                                     <FormInput name="firstName" placeholder="Имя" />
                                     <FormInput name="lastName" placeholder="Фамилия" />
@@ -60,8 +60,8 @@ export const Checkout: FC<CheckoutProps> = ({ className }) => {
                             </WhiteBlock>
                         </div>
                         {/* Правая часть */}
-                        <div className="w-[450px]">
-                            <WhiteBlock className='p-6 sticky top-4'>
+                        <div className="w-full lg:max-w-[450px]">
+                            <WhiteBlock className='p-6 top-4'>
                                 <div className="flex flex-col gap-1">
                                     <span className="text-xl">Итого:</span>
                                     <span className="text-4xl font-extrabold">{`${(ticket.price) + 6000} ₽`}</span>
@@ -108,3 +108,4 @@ export const Checkout: FC<CheckoutProps> = ({ className }) => {
         </Container>
     )
 }
+export default Checkout;
