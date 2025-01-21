@@ -1,6 +1,7 @@
 import { Ticket } from '@/types/main';
 import React, { FC, PropsWithChildren } from 'react'
 import { Toaster } from 'react-hot-toast';
+import { TelegramRoot } from './telegram-root';
 interface IContext {
     ticket: Ticket | null;
     setTicket: (value: Ticket) => void;
@@ -14,9 +15,12 @@ export const Providers = ({ children }: PropsWithChildren) => {
     }
 
     return (
-        <AppContext.Provider value={ctx}>
-            {children}
-            <Toaster />
-        </AppContext.Provider>
+        <TelegramRoot>
+            <AppContext.Provider value={ctx}>
+                {children}
+                <Toaster />
+            </AppContext.Provider>
+        </TelegramRoot>
+
     )
 }

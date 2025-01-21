@@ -5,7 +5,10 @@
 /.pnp
 .pnp.js
 ./test.ts
-
+/.cert
+ca.crt
+ca.key
+cert.key
 # testing
 /coverage
 
